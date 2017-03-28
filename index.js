@@ -7,9 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/styles.css';
 
 ReactDOM.render(
-  <Router history={browserHistory}>
-    <Route path="/" component={Home} />
-    <Route path="/:username" component={User} />
-  </Router>,
+  <Home />,
   document.getElementById('container')
 );

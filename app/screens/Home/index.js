@@ -1,9 +1,14 @@
 import React, {Component} from 'react';
+import User from "../User/index";
+import ReactDOM from 'react-dom';
 
 export default class Home extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
-    this.context.router.push({pathname: `/${this._input.value}`});
+    ReactDOM.render(
+      <User username={this._input.value} />,
+      document.getElementById('container')
+    )
   }
 
   render() {

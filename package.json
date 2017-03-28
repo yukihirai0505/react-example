@@ -11,7 +11,8 @@
     "watch:test": "mocha --watch --compilers js:babel-register",
     "start": "http-server",
     "setup": "npm install && npm run validate",
-    "validate": "npm-run-all lint test build"
+    "validate": "npm-run-all lint test build",
+    "deploy": "npm run build && gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -49,6 +50,7 @@
     "eslint": "3.2.2",
     "eslint-config-kentcdodds": "^9.0.2",
     "file-loader": "0.9.0",
+    "gh-pages": "^0.12.0",
     "http-server": "0.9.0",
     "jsdom": "9.4.1",
     "lodash": "4.14.2",

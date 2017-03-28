@@ -14,7 +14,7 @@ export default class User extends Component {
   }
 
   render() {
-    const {username} = this.props.params
+    const {username} = this.props
     const {filter} = this.state
     return (
       <div className="container">
@@ -34,7 +34,5 @@ export default class User extends Component {
 }
 
 User.propTypes = {
-  params: PropTypes.shape({
-    username: PropTypes.string,
-  }),
+  username: PropTypes.string,
 }
